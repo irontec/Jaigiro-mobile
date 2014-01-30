@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/btn_check_buttonless_on"
+        android:title="Proposatu"
+        app:showAsAction="always"/>
+
+</menu>

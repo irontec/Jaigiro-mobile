@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.irontec.jaigiro"
+    android:versionCode="9"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+    <!--
+     The following two permissions are not required to use
+     Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Jaigiro" >
+        <activity
+            android:name="com.irontec.jaigiro.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.irontec.jaigiro.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.irontec.jaigiro.WebViewActivity"
+            android:label="@string/title_activity_web_view" >
+        </activity>
+        <activity
+            android:name="com.irontec.jaigiro.FestaActivity"
+            android:label="@string/title_activity_festa"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.irontec.jaigiro.FestaListActivity"
+            android:label="@string/title_activity_place"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBxn8VPwX5-dYTs1ee3It7O0jdA_ap8w_k" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.irontec.jaigiro.PreferencesActivity"
+            android:configChanges="locale"
+            android:label="@string/title_activity_map_preferences"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.irontec.jaigiro.BilatzaileaActivity"
+            android:label="@string/title_activity_bilatzailea"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver
+            android:name="com.irontec.jaigiro.services.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.irontec.jaigiro" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.irontec.jaigiro.ProposatuActivity"
+            android:label="@string/title_activity_proposatu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.irontec.jaigiro.EventsActivity"
+            android:label="@string/title_activity_events"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.irontec.jaigiro.EkintzaProposatuActivity"
+            android:label="@string/title_activity_ekintza_proposatu"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name="com.irontec.jaigiro.providers.WidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.irontec.jaigiro.DATA_FETCHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <service
+            android:name="com.irontec.jaigiro.services.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity android:name=".ConfigActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.irontec.jaigiro.services.RemoteFetchService" />
+
+        <activity android:name="com.irontec.jaigiro.configurations.ConfigActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

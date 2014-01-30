@@ -1,0 +1,31 @@
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:staggered="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewSwitcher1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <include layout="@layout/view_loading" />
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ViewStub
+            android:id="@+id/stubEmptyFestak"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inflatedId="@+id/subTree"
+            android:layout="@layout/view_empty_festak" />
+
+        <ViewStub
+            android:id="@+id/stubGridFestak"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inflatedId="@+id/subTree"
+            android:layout="@layout/view_festak_grid" />
+    </RelativeLayout>
+
+</ViewSwitcher>

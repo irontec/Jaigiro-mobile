@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProposatuActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#fff"
+        android:text="Zure herriko jaiak edo beste jairen bat faltan botatzen baduzu, ez izan zalantzarik eta proposatu ezazu!"
+        android:textSize="18sp"
+        android:layout_marginBottom="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zure proposamena" />
+
+        <EditText
+            android:id="@+id/izena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Getxoko portu zaharreko jaiak ikusi nahiko nituzke Jaigiron."/>
+    </LinearLayout>
+
+</LinearLayout>
