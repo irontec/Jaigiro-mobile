@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewJaiaViewController">
+            <connections>
+                <outlet property="textSugerencia" destination="NzQ-bA-0o3" id="lT5-Pn-fiw"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zure herriko jaiak edo beste jairen bat faltan botatzen baduzu, ez izan zalantzarik eta proposatu ezazu!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="3kP-Kz-twe">
+                    <rect key="frame" x="20" y="0.0" width="280" height="105"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="105" id="Otk-k6-WU1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proposamena" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uL8-20-bhN">
+                    <rect key="frame" x="20" y="113" width="280" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="7yZ-WX-ceH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NzQ-bA-0o3">
+                    <rect key="frame" x="20" y="135" width="280" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="onF-Xh-ayB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3kP-Kz-twe" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="5M5-rU-OHB"/>
+                <constraint firstItem="3kP-Kz-twe" firstAttribute="top" secondItem="1" secondAttribute="top" id="IbU-HE-o7k"/>
+                <constraint firstItem="uL8-20-bhN" firstAttribute="top" secondItem="3kP-Kz-twe" secondAttribute="bottom" constant="8" id="YOZ-CD-179"/>
+                <constraint firstAttribute="trailing" secondItem="3kP-Kz-twe" secondAttribute="trailing" constant="20" id="anb-W5-AKa"/>
+                <constraint firstItem="NzQ-bA-0o3" firstAttribute="top" secondItem="uL8-20-bhN" secondAttribute="bottom" constant="8" id="cDm-Rh-uZf"/>
+                <constraint firstItem="uL8-20-bhN" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="dTL-ZR-DSh"/>
+                <constraint firstItem="NzQ-bA-0o3" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="i8l-yt-uAO"/>
+                <constraint firstAttribute="trailing" secondItem="NzQ-bA-0o3" secondAttribute="trailing" constant="20" id="s87-6q-eNf"/>
+                <constraint firstAttribute="trailing" secondItem="uL8-20-bhN" secondAttribute="trailing" constant="20" id="xRG-ut-BiD"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

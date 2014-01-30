@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
+            <connections>
+                <outlet property="emptyView" destination="0rO-Z0-i34" id="DxP-Rt-6qx"/>
+                <outlet property="tableView" destination="b3B-aO-VCz" id="RdQ-bG-qnF"/>
+                <outlet property="topEmptyViewConstraint" destination="MCp-po-JlZ" id="Qvj-sN-tqf"/>
+                <outlet property="topTableViewConstraint" destination="sKH-G5-bAB" id="LAv-n0-Bjz"/>
+                <outlet property="topTxtConstraint" destination="w5f-Qb-THI" id="2Dg-sf-TCl"/>
+                <outlet property="txtSearch" destination="eB7-Mx-1HK" id="ZHK-7z-tlX"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMM-fX-jGB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgPrinci_searchBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="tAx-mG-H6D">
+                            <rect key="frame" x="77" y="125" width="167" height="250"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="167" id="0OT-Cm-1sm"/>
+                                <constraint firstAttribute="height" constant="250" id="fDF-1W-E0J"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgNombre_searchBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="f3R-B5-gyh">
+                            <rect key="frame" x="40" y="375" width="240" height="80"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Div-Y7-B2a"/>
+                                <constraint firstAttribute="width" constant="240" id="hMW-vU-p45"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="f3R-B5-gyh" secondAttribute="centerX" id="4j1-Ux-e5M"/>
+                        <constraint firstItem="f3R-B5-gyh" firstAttribute="top" secondItem="tAx-mG-H6D" secondAttribute="bottom" id="Lx8-Mm-lHI"/>
+                        <constraint firstAttribute="centerX" secondItem="tAx-mG-H6D" secondAttribute="centerX" id="Tul-lD-ayL"/>
+                        <constraint firstAttribute="bottom" secondItem="f3R-B5-gyh" secondAttribute="bottom" constant="25" id="orZ-ja-h0j"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" adbz: Bilboko Aste Nagusia" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eB7-Mx-1HK" userLabel="txtSearch">
+                    <rect key="frame" x="20" y="25" width="280" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="cpp-mr-4dN"/>
+                    </constraints>
+                    <color key="textColor" red="1" green="0.1293520671" blue="0.2981375309" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Ohd-rZ-p7z"/>
+                    </connections>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableVIew" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="b3B-aO-VCz">
+                    <rect key="frame" x="0.0" y="70" width="320" height="410"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IyK-Sa-5ZJ"/>
+                        <outlet property="delegate" destination="-1" id="U6D-lL-Ha6"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rO-Z0-i34">
+                    <rect key="frame" x="0.0" y="70" width="320" height="410"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ez daude emaitzik..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43T-cq-PeG">
+                            <rect key="frame" x="20" y="36" width="280" height="69"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="69" id="Sw0-S1-lI7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="43T-cq-PeG" firstAttribute="leading" secondItem="0rO-Z0-i34" secondAttribute="leading" constant="20" id="QaT-QA-T3Y"/>
+                        <constraint firstItem="43T-cq-PeG" firstAttribute="top" secondItem="0rO-Z0-i34" secondAttribute="top" constant="36" id="tGL-gb-U7o"/>
+                        <constraint firstAttribute="trailing" secondItem="43T-cq-PeG" secondAttribute="trailing" constant="20" id="xmh-oK-3rU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="b3B-aO-VCz" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3Dc-Hs-shN"/>
+                <constraint firstItem="UMM-fX-jGB" firstAttribute="top" secondItem="1" secondAttribute="top" id="G3Y-3m-bdL"/>
+                <constraint firstItem="0rO-Z0-i34" firstAttribute="top" secondItem="eB7-Mx-1HK" secondAttribute="bottom" constant="5" id="MCp-po-JlZ"/>
+                <constraint firstAttribute="bottom" secondItem="b3B-aO-VCz" secondAttribute="bottom" id="Ope-Ar-kK2"/>
+                <constraint firstAttribute="bottom" secondItem="0rO-Z0-i34" secondAttribute="bottom" id="SnM-Td-p8y"/>
+                <constraint firstAttribute="bottom" secondItem="0rO-Z0-i34" secondAttribute="bottom" id="XyZ-5C-Q2D"/>
+                <constraint firstItem="eB7-Mx-1HK" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="cJ7-Mo-tbK"/>
+                <constraint firstAttribute="trailing" secondItem="UMM-fX-jGB" secondAttribute="trailing" id="djT-Ih-d68"/>
+                <constraint firstItem="UMM-fX-jGB" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="gg0-WA-UIV"/>
+                <constraint firstItem="0rO-Z0-i34" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="iKs-Q5-N5u"/>
+                <constraint firstAttribute="bottom" secondItem="0rO-Z0-i34" secondAttribute="bottom" id="l2W-nZ-L5T"/>
+                <constraint firstAttribute="bottom" secondItem="UMM-fX-jGB" secondAttribute="bottom" id="lYV-Xo-YhF"/>
+                <constraint firstAttribute="trailing" secondItem="eB7-Mx-1HK" secondAttribute="trailing" constant="20" id="mGO-ih-nOi"/>
+                <constraint firstAttribute="trailing" secondItem="0rO-Z0-i34" secondAttribute="trailing" id="nmx-SD-blq"/>
+                <constraint firstAttribute="trailing" secondItem="b3B-aO-VCz" secondAttribute="trailing" id="pcn-Ee-Uik"/>
+                <constraint firstItem="b3B-aO-VCz" firstAttribute="top" secondItem="eB7-Mx-1HK" secondAttribute="bottom" constant="5" id="sKH-G5-bAB"/>
+                <constraint firstItem="eB7-Mx-1HK" firstAttribute="top" secondItem="1" secondAttribute="top" constant="25" id="w5f-Qb-THI" userLabel="topConstraint"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imgNombre_searchBack.png" width="298" height="99"/>
+        <image name="imgPrinci_searchBack.png" width="132" height="198"/>
+    </resources>
+</document>
