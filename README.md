@@ -53,7 +53,7 @@ GPL v3
 
 **Free Software, Hell Yeah!**
 
-[1]:http://mintzatu.com/
+[1]:http://jaigiro.net/
 [2]:http://source.android.com/
 [3]:http://twitter4j.org/en/index.html
 [4]:https://developers.facebook.com/
